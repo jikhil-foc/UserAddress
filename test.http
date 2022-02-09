@@ -1,0 +1,26 @@
+GET http://localhost:3000/api/users
+
+###
+
+POST http://localhost:3000/api/users 
+content-type: application/json
+
+{
+    "name": "jikhil",
+    "email": "jikhil@vjvfc.com",
+    "password":"jikhil"
+}
+
+
+###
+
+GET http://localhost:3000/api/users/2
+
+###
+
+PUT  http://localhost:3000/api/users/2
+content-type: application/json
+
+{
+    "name": "jikhilPs",
+}

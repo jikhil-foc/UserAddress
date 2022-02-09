@@ -1,0 +1,30 @@
+{
+  "name": "user-management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "startDev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sequelizeInit": "sequelize init",
+    "debug": "node --inspect index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^15.0.0",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0",
+    "sequelize": "^6.15.0",
+    "sequelize-cli": "^6.4.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
