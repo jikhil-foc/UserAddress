@@ -51,9 +51,19 @@ exports.addUser = async (req, res) => {
         });
       }
 
+      let emergencyContactUser;
+
+      if (contactInfo?.emergencyContactUser) {
+        const emergencyUser = await db.User.findOne({
+          where: { username: contactInfo?.emergencyContactUser },
+        });
+
+        emergencyContactUser = emergencyUser ? emergencyUser.id : null;
+      } else emergencyContactUser = null;
+
       const savedContact = await db.ContactDetails.create({
         phone_number: contactInfo?.phone_number,
-        emergency_contact_user_id: contactInfo?.emergencyContactUser,
+        emergency_contact_user_id: emergencyContactUser,
       });
 
       if (!savedContact) {
